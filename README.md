@@ -8,14 +8,14 @@ In this assignment, you will write a series of programs that simulate how a plan
 2. Ensure that each program runs without errors. If your code fails to execute, a flat 20% penalty will be applied, regardless of the nature of the error.
 3. Your program output must match the expected format shown in the "Example output" of each part.
 4. Use the `input()` function to collect user input. Since `input()` always returns a string, you must convert it to the appropriate type before using it in calculations. Note that some inputs must be integers (e.g., `days`), while others may contain decimals — make sure to store integer values as `int` and decimal values as `float`.
-5. When prompting for user input, always follow the exact order listed in each task.
+5. When prompting for user input, always follow the **exact order** listed in each task.
 6. Unless stated otherwise, **computed values** should always be printed rounded to exactly 2 decimal places — use the `round()` function for this. The function works as `round(number, decimal_places)`. For example, `round(11.5752, 2)` gives `11.58`.
 
 
 ## Part 1. Fixed Daily Compound Growth [25 Points]
 Create a file named `part1.py`.
 
-You're managing a research greenhouse that monitors the growth of experimental plants. Your goal is to project a plant's height after a period of time using a program that models how plants grow under different conditions. As a start, we assume the plant grows by a fixed percentage of its current height every day — this is called daily compound growth.
+You're managing a research greenhouse that monitors the growth of experimental plants. Your goal is to project a plant's height after a period of time using a program that models how plants grow under different conditions. As a start, we assume the plant grows by a fixed percentage of its current height every day — this is called **daily compound growth**.
 
 ### Task 1.1 — User Input
 
@@ -77,7 +77,7 @@ Print a clearly formatted message summarizing the number of days, the size and f
 
 `initial_height = 10`, `daily_growth = 0.05`, `days = 7`, `boost_amount = 2.0`
 ```text
-After 7 days (with a 2 cm boost every 7th day), the plant is 16.07 cm tall.
+After 7 days (with a 2.0 cm boost every 7th day), the plant is 16.07 cm tall.
 ```
 
 `initial_height = 15.5`, `daily_growth = 0.03`, `days = 14`, `boost_amount = 1.5`
@@ -87,7 +87,7 @@ After 14 days (with a 1.5 cm boost every 7th day), the plant is 26.79 cm tall.
 
 `initial_height = 8`, `daily_growth = 0.08`, `days = 6`, `boost_amount = 2.0`
 ```text
-After 6 days (with a 2 cm boost every 7th day), the plant is 12.69 cm tall.
+After 6 days (with a 2.0 cm boost every 7th day), the plant is 12.69 cm tall.
 ```
 
 
@@ -119,17 +119,17 @@ After computing the number of days needed to reach the target height, print the 
 
 `initial_height = 10`, `daily_growth = 0.05`, `target_height = 25`, `boost_amount = 1.5`
 ```text
-After 16 days (with a 1.5 cm boost every 7th day), the plant reaches at least 25 cm.
+After 16 days (with a 1.5 cm boost every 7th day), the plant reaches at least 25.0 cm.
 ```
 
 `initial_height = 7.5`, `daily_growth = 0.02`, `target_height = 10`, `boost_amount = 1.0`
 ```text
-After 9 days (with a 1 cm boost every 7th day), the plant reaches at least 10 cm.
+After 9 days (with a 1.0 cm boost every 7th day), the plant reaches at least 10.0 cm.
 ```
 
 `initial_height = 12`, `daily_growth = 0.01`, `target_height = 13`, `boost_amount = 0.5`
 ```text
-After 7 days (with a 0.5 cm boost every 7th day), the plant reaches at least 13 cm.
+After 7 days (with a 0.5 cm boost every 7th day), the plant reaches at least 13.0 cm.
 ```
 
 
@@ -152,7 +152,7 @@ Ask the user to enter the following information. You must use the exact variable
 
 Determine the least frequent boost schedule that still allows the plant to reach `target_height` within the given number of days. Consider all possible boost intervals and identify the largest interval that works — that is, the one that requires boosting least often. If multiple intervals allow the plant to meet the target, report the largest one. If no interval works, including applying the boost every single day, report that the target is not achievable within the given number of days.
 
-***Hint.*** The boost interval is represented as "every X days", where X is a positive integer. You can try different values of X — starting from the largest possible interval and working downward — to find the smallest X that still allows the plant to reach the target. The largest possible interval to try is `days` itself (i.e., one boost applied on the final day), and the smallest is 1 (a boost every single day).
+***Hint.*** The boost interval is represented as "every X days", where X is a positive integer. You can try different values of X — starting from the largest possible interval and working downward — to find the largest X that still allows the plant to reach the target. The largest possible interval to try is `days` itself (i.e., one boost applied on the final day), and the smallest is 1 (a boost every single day).
 
 ### Task 4.3 — Print the Result
 
@@ -164,7 +164,7 @@ After your program determines the least frequent boost interval, print the resul
 
 `initial_height = 10`, `daily_growth = 0.05`, `target_height = 30`, `days = 20`, `boost_amount = 1.5`
 ```text
-To reach at least 30 cm in 20 days, apply a 1.5 cm boost every 10 days.
+To reach at least 30.0 cm in 20 days, apply a 1.5 cm boost every 10 days.
 ```
 
 `initial_height = 8`, `daily_growth = 0.01`, `target_height = 50`, `days = 15`, `boost_amount = 1.0`
